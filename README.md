@@ -1,2 +1,4 @@
 # guilded-bridge
-Simple Guilded &amp; Discord bridge, designed for WiiLink24.
+Simple Guilded & Discord bridge, designed for WiiLink24.
+
+Kinda bad code, but hey, it works.
