@@ -34,6 +34,5 @@ async def on_message(ctx):
         webhook = DiscordWebhook(url=os.getenv('GUILDED_WEBHOOK'), content='<' + ctx.author.name + '> ' + ctx.content + " " + " ".join(attachment_urls))
 
     response = webhook.execute()
-    print(response)
 
 bot.run(os.getenv('DISCORD_TOKEN'))
