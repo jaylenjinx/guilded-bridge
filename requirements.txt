@@ -1,0 +1,5 @@
+discord.py
+guilded.py
+discord-webhook
+python-dotenv
+webhooks

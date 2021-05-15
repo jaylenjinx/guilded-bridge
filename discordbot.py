@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='W!')
 @bot.event
 async def on_ready():
     print('Discord bot logged in as ' + bot.user.name)
-    await bot.change_presence(activity=discord.Game(name="guilded.gg/WiiLink24"))
+    await bot.change_presence(activity=discord.Game(name=os.getenv('DISCORD_STATUS')))
 
 @bot.event
 async def on_message(ctx):
