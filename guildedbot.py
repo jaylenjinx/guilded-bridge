@@ -15,8 +15,9 @@ async def on_ready():
 async def on_message(ctx):
     if ctx.author.name == 'Gil':
         return
-    cleanedcontent = ctx.content.replace('@everyone', '@​everyone')
-    webhook = DiscordWebhook(url=os.getenv('DISCORD_WEBHOOK'), content=cleanedcontent, username=ctx.author.name, avatar_url=ctx.author.avatar_url)
+    cleanedeveryone = ctx.content.replace('@everyone', '@​everyone')
+    cleanedhere = cleanedeveryone.replace('@here', '@​here')
+    webhook = DiscordWebhook(url=os.getenv('DISCORD_WEBHOOK'), content=cleanedhere, username=ctx.author.name, avatar_url=ctx.author.avatar_url)
     response = webhook.execute()
 
 bot.run(os.getenv('GUILDED_EMAIL'), os.getenv('GUILDED_PASSWORD'))
